@@ -19,7 +19,6 @@
 		5E6293371764E1E10030F009 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E6293361764E1E10030F009 /* Default-568h@2x.png */; };
 		5EB84FC61764E3B80031472E /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB84FC41764E3B80031472E /* GalleryViewController.m */; };
 		5EB84FC71764E3B80031472E /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB84FC51764E3B80031472E /* GalleryViewController.xib */; };
-		5EB84FCB1764E4D20031472E /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB84FCA1764E4D20031472E /* Constants.m */; };
 		5EB84FCF1764F3B00031472E /* FlickrService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB84FCE1764F3B00031472E /* FlickrService.m */; };
 		5EE7D7761765176300DF7550 /* NormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7D7751765176300DF7550 /* NormalCell.m */; };
 		6C12DB9695B6449FAD8CA50F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E410E318A44B4726A171724B /* libPods.a */; };
@@ -45,8 +44,6 @@
 		5EB84FC31764E3B80031472E /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
 		5EB84FC41764E3B80031472E /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
 		5EB84FC51764E3B80031472E /* GalleryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryViewController.xib; sourceTree = "<group>"; };
-		5EB84FC91764E4D20031472E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		5EB84FCA1764E4D20031472E /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		5EB84FCD1764F3B00031472E /* FlickrService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrService.h; sourceTree = "<group>"; };
 		5EB84FCE1764F3B00031472E /* FlickrService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrService.m; sourceTree = "<group>"; };
 		5EB84FD01764FE5E0031472E /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
@@ -150,8 +147,6 @@
 		5EB84FCC1764E5480031472E /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				5EB84FC91764E4D20031472E /* Constants.h */,
-				5EB84FCA1764E4D20031472E /* Constants.m */,
 				5EB84FCD1764F3B00031472E /* FlickrService.h */,
 				5EB84FCE1764F3B00031472E /* FlickrService.m */,
 				5EB84FD01764FE5E0031472E /* Common.h */,
@@ -261,7 +256,6 @@
 				5E62932D1764E1E10030F009 /* main.m in Sources */,
 				5E6293311764E1E10030F009 /* AppDelegate.m in Sources */,
 				5EB84FC61764E3B80031472E /* GalleryViewController.m in Sources */,
-				5EB84FCB1764E4D20031472E /* Constants.m in Sources */,
 				5EB84FCF1764F3B00031472E /* FlickrService.m in Sources */,
 				5E28EC7A17650D2E00841A05 /* Photo.m in Sources */,
 				5EE7D7761765176300DF7550 /* NormalCell.m in Sources */,
