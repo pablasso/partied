@@ -11,6 +11,7 @@ static CGRect const kCellFrame = {0.0f, 0.0f, 100.0f, 100.0f};
 
 @property (nonatomic, strong) IBOutlet AQGridView *gridView;
 @property (nonatomic, strong) NSMutableArray *items;
+@property (nonatomic) BOOL geoActive;
 
 @end
 
@@ -25,15 +26,15 @@ static CGRect const kCellFrame = {0.0f, 0.0f, 100.0f, 100.0f};
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.geoActive = NO;
+    
     self.gridView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
 	self.gridView.autoresizesSubviews = YES;
 	self.gridView.delegate = self;
 	self.gridView.dataSource = self;
     
-    [Photo photosWithBlock:^(NSArray *photos) {
-        [self.items addObjectsFromArray:photos];
-        [self.gridView reloadData];
-    }];
+    [self setupGeoButton];
+    [self requestPhotos];
 }
 
 
@@ -43,6 +44,31 @@ static CGRect const kCellFrame = {0.0f, 0.0f, 100.0f, 100.0f};
 
 - (void)viewWillDisappear:(BOOL)animated {
     self.title = @"Back";
+}
+
+#pragma mark - Private
+
+- (void)triggerGeolocalization {
+    [self requestPhotos];
+    self.geoActive = !self.geoActive;
+    [self setupGeoButton];
+}
+
+- (void)setupGeoButton {
+    self.navigationItem.rightBarButtonItem = nil;
+    UIBarButtonItemStyle style = !self.geoActive ? UIBarButtonItemStyleDone : UIBarButtonItemStylePlain;
+    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithTitle:@"Near You" style:style
+                                                              target:self action:@selector(triggerGeolocalization)];
+    self.navigationItem.rightBarButtonItem = button;
+}
+
+- (void)requestPhotos {
+    [self.items removeAllObjects];
+    
+    [Photo photosGeolocated:self.geoActive withBlock:^(NSArray *photos) {
+        [self.items addObjectsFromArray:photos];
+        [self.gridView reloadData];
+    }];
 }
 
 #pragma mark - AQGridViewDelegate

@@ -20,7 +20,7 @@ static NSString * const kFlickrBaseURL = @"http://api.flickr.com/";
     return _sharedClient;
 }
 
-+ (void)photosWithBlock:(void (^)(NSArray *photos))block {
++ (void)photosGeolocated:(BOOL)geolocated withBlock:(void (^)(NSArray *photos))block {
     NSString *path = @"services/rest/";
     NSDictionary *parameters = @{@"method": @"flickr.photos.search",
                                  @"api_key": kFlickrKey,
