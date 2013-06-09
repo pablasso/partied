@@ -16,6 +16,7 @@ static NSString * const kFlickrBaseURL = @"http://api.flickr.com/";
                                  @"api_key": kFlickrKey,
                                  @"format": @"json",
                                  @"nojsoncallback": @"1",
+                                 @"per_page": @"500",
                                  @"tags": @"party"};
     
     NSURLRequest *request = [[FlickrService sharedClient] requestWithMethod:@"GET" path:path parameters:parameters];
