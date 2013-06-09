@@ -1,6 +1,7 @@
 #import "GalleryViewController.h"
 #import <AQGridView.h>
 #import <UIImageView+AFNetworking.h>
+#import "PhotoViewController.h"
 #import "FlickrService.h"
 #import "NormalCell.h"
 #import "Photo.h"
@@ -40,7 +41,11 @@ static CGRect const kCellFrame = {0.0f, 0.0f, 100.0f, 100.0f};
 
 #pragma mark - AQGridViewDelegate
 
-- (void)gridView:(AQGridView *)gridView didSelectItemAtIndex:(NSUInteger)index {}
+- (void)gridView:(AQGridView *)gridView didSelectItemAtIndex:(NSUInteger)index {
+    Photo *photo = [self.items objectAtIndex:index];
+    PhotoViewController *photoController = [[PhotoViewController alloc] initWithPhoto:photo];
+    [self.navigationController pushViewController:photoController animated:YES];
+}
 
 #pragma mark - AQGridViewDataSource
 

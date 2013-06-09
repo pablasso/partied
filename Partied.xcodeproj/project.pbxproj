@@ -17,6 +17,8 @@
 		5E6293331764E1E10030F009 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E6293321764E1E10030F009 /* Default.png */; };
 		5E6293351764E1E10030F009 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E6293341764E1E10030F009 /* Default@2x.png */; };
 		5E6293371764E1E10030F009 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E6293361764E1E10030F009 /* Default-568h@2x.png */; };
+		5EAE345E176522DD00619FB5 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE345C176522DD00619FB5 /* PhotoViewController.m */; };
+		5EAE345F176522DD00619FB5 /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EAE345D176522DD00619FB5 /* PhotoViewController.xib */; };
 		5EB84FC61764E3B80031472E /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB84FC41764E3B80031472E /* GalleryViewController.m */; };
 		5EB84FC71764E3B80031472E /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB84FC51764E3B80031472E /* GalleryViewController.xib */; };
 		5EB84FCF1764F3B00031472E /* FlickrService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB84FCE1764F3B00031472E /* FlickrService.m */; };
@@ -41,6 +43,9 @@
 		5E6293321764E1E10030F009 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5E6293341764E1E10030F009 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5E6293361764E1E10030F009 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5EAE345B176522DD00619FB5 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		5EAE345C176522DD00619FB5 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		5EAE345D176522DD00619FB5 /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
 		5EB84FC31764E3B80031472E /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
 		5EB84FC41764E3B80031472E /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
 		5EB84FC51764E3B80031472E /* GalleryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryViewController.xib; sourceTree = "<group>"; };
@@ -112,6 +117,8 @@
 				5E6293301764E1E10030F009 /* AppDelegate.m */,
 				5EB84FC31764E3B80031472E /* GalleryViewController.h */,
 				5EB84FC41764E3B80031472E /* GalleryViewController.m */,
+				5EAE345B176522DD00619FB5 /* PhotoViewController.h */,
+				5EAE345C176522DD00619FB5 /* PhotoViewController.m */,
 				5E28EC7B17650D3300841A05 /* Models */,
 				5EB84FC81764E3C00031472E /* Views */,
 				5EB84FCC1764E5480031472E /* Lib */,
@@ -137,9 +144,10 @@
 		5EB84FC81764E3C00031472E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5EB84FC51764E3B80031472E /* GalleryViewController.xib */,
 				5EE7D7741765176300DF7550 /* NormalCell.h */,
 				5EE7D7751765176300DF7550 /* NormalCell.m */,
+				5EB84FC51764E3B80031472E /* GalleryViewController.xib */,
+				5EAE345D176522DD00619FB5 /* PhotoViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -212,6 +220,7 @@
 				5E6293351764E1E10030F009 /* Default@2x.png in Resources */,
 				5E6293371764E1E10030F009 /* Default-568h@2x.png in Resources */,
 				5EB84FC71764E3B80031472E /* GalleryViewController.xib in Resources */,
+				5EAE345F176522DD00619FB5 /* PhotoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +268,7 @@
 				5EB84FCF1764F3B00031472E /* FlickrService.m in Sources */,
 				5E28EC7A17650D2E00841A05 /* Photo.m in Sources */,
 				5EE7D7761765176300DF7550 /* NormalCell.m in Sources */,
+				5EAE345E176522DD00619FB5 /* PhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
