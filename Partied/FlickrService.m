@@ -28,7 +28,7 @@ static NSString * const kFlickrBaseURL = @"http://api.flickr.com/";
         
         NSMutableArray *photos = [[NSMutableArray alloc] init];
         for (NSDictionary *dictionary in json[@"photos"][@"photo"]) {
-            NSString *thumbnailPhoto = [NSString stringWithFormat:@"http://farm%@.staticflickr.com/%@/%@_%@_s.jpg",
+            NSString *thumbnailPhoto = [NSString stringWithFormat:@"http://farm%@.staticflickr.com/%@/%@_%@_t.jpg",
                                         dictionary[@"farm"], dictionary[@"server"],
                                         dictionary[@"id"], dictionary[@"secret"]];
             
