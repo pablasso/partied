@@ -5,8 +5,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.galleryController = [[GalleryViewController alloc] initWithNibName:nil bundle:nil];
-    self.window.rootViewController = self.galleryController;
+
+    GalleryViewController *galleryController = [[GalleryViewController alloc] initWithNibName:nil bundle:nil];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:galleryController];
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    
+    self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }
