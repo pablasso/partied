@@ -17,6 +17,8 @@
 		5E6293331764E1E10030F009 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E6293321764E1E10030F009 /* Default.png */; };
 		5E6293351764E1E10030F009 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E6293341764E1E10030F009 /* Default@2x.png */; };
 		5E6293371764E1E10030F009 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E6293361764E1E10030F009 /* Default-568h@2x.png */; };
+		5E6D9DD61765401900D8D54B /* LocationHoncho.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D9DD51765401900D8D54B /* LocationHoncho.m */; };
+		5E6D9DD81765410D00D8D54B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6D9DD71765410C00D8D54B /* CoreLocation.framework */; };
 		5EAE345E176522DD00619FB5 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE345C176522DD00619FB5 /* PhotoViewController.m */; };
 		5EAE345F176522DD00619FB5 /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EAE345D176522DD00619FB5 /* PhotoViewController.xib */; };
 		5EB84FC61764E3B80031472E /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB84FC41764E3B80031472E /* GalleryViewController.m */; };
@@ -43,6 +45,9 @@
 		5E6293321764E1E10030F009 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5E6293341764E1E10030F009 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5E6293361764E1E10030F009 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5E6D9DD41765401900D8D54B /* LocationHoncho.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationHoncho.h; sourceTree = "<group>"; };
+		5E6D9DD51765401900D8D54B /* LocationHoncho.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationHoncho.m; sourceTree = "<group>"; };
+		5E6D9DD71765410C00D8D54B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5EAE345B176522DD00619FB5 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		5EAE345C176522DD00619FB5 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		5EAE345D176522DD00619FB5 /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E6D9DD81765410D00D8D54B /* CoreLocation.framework in Frameworks */,
 				5E6293211764E1E10030F009 /* UIKit.framework in Frameworks */,
 				5E6293231764E1E10030F009 /* Foundation.framework in Frameworks */,
 				5E6293251764E1E10030F009 /* CoreGraphics.framework in Frameworks */,
@@ -102,6 +108,7 @@
 		5E62931F1764E1E10030F009 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E6D9DD71765410C00D8D54B /* CoreLocation.framework */,
 				5E6293201764E1E10030F009 /* UIKit.framework */,
 				5E6293221764E1E10030F009 /* Foundation.framework */,
 				5E6293241764E1E10030F009 /* CoreGraphics.framework */,
@@ -158,6 +165,8 @@
 				5EB84FCD1764F3B00031472E /* FlickrService.h */,
 				5EB84FCE1764F3B00031472E /* FlickrService.m */,
 				5EB84FD01764FE5E0031472E /* Common.h */,
+				5E6D9DD41765401900D8D54B /* LocationHoncho.h */,
+				5E6D9DD51765401900D8D54B /* LocationHoncho.m */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -269,6 +278,7 @@
 				5E28EC7A17650D2E00841A05 /* Photo.m in Sources */,
 				5EE7D7761765176300DF7550 /* NormalCell.m in Sources */,
 				5EAE345E176522DD00619FB5 /* PhotoViewController.m in Sources */,
+				5E6D9DD61765401900D8D54B /* LocationHoncho.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

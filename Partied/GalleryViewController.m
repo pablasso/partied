@@ -1,6 +1,7 @@
 #import "GalleryViewController.h"
 #import <AQGridView.h>
 #import <UIImageView+AFNetworking.h>
+#import "LocationHoncho.h"
 #import "PhotoViewController.h"
 #import "NormalCell.h"
 #import "Photo.h"
@@ -33,6 +34,7 @@ static CGRect const kCellFrame = {0.0f, 0.0f, 100.0f, 100.0f};
 	self.gridView.delegate = self;
 	self.gridView.dataSource = self;
     
+    [[LocationHoncho sharedInstance] startLocating];
     [self setupGeoButton];
     [self requestPhotos];
 }

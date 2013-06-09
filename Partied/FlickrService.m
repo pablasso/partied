@@ -1,5 +1,6 @@
 #import "FlickrService.h"
 #import <AFJSONRequestOperation.h>
+#import "LocationHoncho.h"
 #import "Photo.h"
 
 static NSString * const kFlickrKey = @"926fa72beface70c41aaabd43cfc0db6";
@@ -22,12 +23,20 @@ static NSString * const kFlickrBaseURL = @"http://api.flickr.com/";
 
 + (void)photosGeolocated:(BOOL)geolocated withBlock:(void (^)(NSArray *photos))block {
     NSString *path = @"services/rest/";
-    NSDictionary *parameters = @{@"method": @"flickr.photos.search",
-                                 @"api_key": kFlickrKey,
-                                 @"format": @"json",
-                                 @"nojsoncallback": @"1",
-                                 @"per_page": @"500",
-                                 @"tags": @"party"};
+    NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
+    parameters[@"method"] = @"flickr.photos.search";
+    parameters[@"api_key"] = kFlickrKey;
+    parameters[@"format"] = @"json";
+    parameters[@"nojsoncallback"] = @"1";
+    parameters[@"per_page"] = @"500";
+    parameters[@"tags"] = @"party";
+    
+    if (geolocated) {
+        parameters[@"lat"] = [NSString stringWithFormat:@"%f", [[LocationHoncho sharedInstance] latitude]];
+        parameters[@"lon"] = [NSString stringWithFormat:@"%f", [[LocationHoncho sharedInstance] longitude]];
+        parameters[@"radius"] = @"10";
+    }
+
     
     NSURLRequest *request = [[FlickrService sharedClient] requestWithMethod:@"GET" path:path parameters:parameters];
     
