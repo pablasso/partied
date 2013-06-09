@@ -26,8 +26,6 @@ static CGRect const kCellFrame = {0.0f, 0.0f, 100.0f, 100.0f};
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Partied!";
-    
     self.gridView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
 	self.gridView.autoresizesSubviews = YES;
 	self.gridView.delegate = self;
@@ -37,6 +35,15 @@ static CGRect const kCellFrame = {0.0f, 0.0f, 100.0f, 100.0f};
         [self.items addObjectsFromArray:photos];
         [self.gridView reloadData];
     }];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.title = @"Partied!";
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    self.title = @"Back";
 }
 
 #pragma mark - AQGridViewDelegate
