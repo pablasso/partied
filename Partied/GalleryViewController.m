@@ -5,9 +5,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [FlickrService photosWithBlock:^(NSArray *photos, NSError *error) {
+    [FlickrService photosWithBlock:^(NSArray *photos) {
         DLog(@"photos:%@", photos);
-        DLog(@"error:%@", error);
     }];
 }
 

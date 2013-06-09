@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E28EC7A17650D2E00841A05 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E28EC7917650D2E00841A05 /* Photo.m */; };
 		5E6293211764E1E10030F009 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6293201764E1E10030F009 /* UIKit.framework */; };
 		5E6293231764E1E10030F009 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6293221764E1E10030F009 /* Foundation.framework */; };
 		5E6293251764E1E10030F009 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6293241764E1E10030F009 /* CoreGraphics.framework */; };
@@ -25,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		2EAE8091128C4ADEA5A3BC10 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		5E28EC7817650D2E00841A05 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		5E28EC7917650D2E00841A05 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		5E62931D1764E1E10030F009 /* Partied.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Partied.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E6293201764E1E10030F009 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5E6293221764E1E10030F009 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E28EC7B17650D3300841A05 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5E28EC7817650D2E00841A05 /* Photo.h */,
+				5E28EC7917650D2E00841A05 /* Photo.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		5E6293141764E1E10030F009 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +112,7 @@
 				5E6293301764E1E10030F009 /* AppDelegate.m */,
 				5EB84FC31764E3B80031472E /* GalleryViewController.h */,
 				5EB84FC41764E3B80031472E /* GalleryViewController.m */,
+				5E28EC7B17650D3300841A05 /* Models */,
 				5EB84FC81764E3C00031472E /* Views */,
 				5EB84FCC1764E5480031472E /* Lib */,
 				5E6293271764E1E10030F009 /* Supporting Files */,
@@ -245,6 +258,7 @@
 				5EB84FC61764E3B80031472E /* GalleryViewController.m in Sources */,
 				5EB84FCB1764E4D20031472E /* Constants.m in Sources */,
 				5EB84FCF1764F3B00031472E /* FlickrService.m in Sources */,
+				5E28EC7A17650D2E00841A05 /* Photo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
