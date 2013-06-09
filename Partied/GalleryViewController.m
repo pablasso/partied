@@ -51,16 +51,25 @@ static CGRect const kCellFrame = {0.0f, 0.0f, 100.0f, 100.0f};
 #pragma mark - Private
 
 - (void)triggerGeolocalization {
-    [self requestPhotos];
     self.geoActive = !self.geoActive;
+    [self requestPhotos];
     [self setupGeoButton];
 }
 
 - (void)setupGeoButton {
     self.navigationItem.rightBarButtonItem = nil;
-    UIBarButtonItemStyle style = !self.geoActive ? UIBarButtonItemStyleDone : UIBarButtonItemStylePlain;
-    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithTitle:@"Near You" style:style
+    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered
                                                               target:self action:@selector(triggerGeolocalization)];
+    
+    if (self.geoActive) {
+        [[UIBarButtonItem appearance] setTintColor:[UIColor blueColor]];
+        button.title = @"Done";
+    }
+    else {
+        [[UIBarButtonItem appearance] setTintColor:[UIColor blackColor]];
+        button.title = @"Near You";
+    }
+    
     self.navigationItem.rightBarButtonItem = button;
 }
 
