@@ -19,6 +19,7 @@
 		5EB84FC61764E3B80031472E /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB84FC41764E3B80031472E /* GalleryViewController.m */; };
 		5EB84FC71764E3B80031472E /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB84FC51764E3B80031472E /* GalleryViewController.xib */; };
 		5EB84FCB1764E4D20031472E /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB84FCA1764E4D20031472E /* Constants.m */; };
+		5EB84FCF1764F3B00031472E /* FlickrService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB84FCE1764F3B00031472E /* FlickrService.m */; };
 		6C12DB9695B6449FAD8CA50F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E410E318A44B4726A171724B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,9 @@
 		5EB84FC51764E3B80031472E /* GalleryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryViewController.xib; sourceTree = "<group>"; };
 		5EB84FC91764E4D20031472E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		5EB84FCA1764E4D20031472E /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		5EB84FCD1764F3B00031472E /* FlickrService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrService.h; sourceTree = "<group>"; };
+		5EB84FCE1764F3B00031472E /* FlickrService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrService.m; sourceTree = "<group>"; };
+		5EB84FD01764FE5E0031472E /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		E410E318A44B4726A171724B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -130,6 +134,9 @@
 			children = (
 				5EB84FC91764E4D20031472E /* Constants.h */,
 				5EB84FCA1764E4D20031472E /* Constants.m */,
+				5EB84FCD1764F3B00031472E /* FlickrService.h */,
+				5EB84FCE1764F3B00031472E /* FlickrService.m */,
+				5EB84FD01764FE5E0031472E /* Common.h */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -237,6 +244,7 @@
 				5E6293311764E1E10030F009 /* AppDelegate.m in Sources */,
 				5EB84FC61764E3B80031472E /* GalleryViewController.m in Sources */,
 				5EB84FCB1764E4D20031472E /* Constants.m in Sources */,
+				5EB84FCF1764F3B00031472E /* FlickrService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +287,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -303,7 +311,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
