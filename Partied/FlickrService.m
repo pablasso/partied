@@ -10,6 +10,16 @@ static NSString * const kFlickrBaseURL = @"http://api.flickr.com/";
 
 #pragma mark - Public
 
++ (FlickrService *)sharedClient {
+    static FlickrService *_sharedClient = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedClient = [[FlickrService alloc] initWithBaseURL:[NSURL URLWithString:kFlickrBaseURL]];
+    });
+    
+    return _sharedClient;
+}
+
 + (void)photosWithBlock:(void (^)(NSArray *photos))block {
     NSString *path = @"services/rest/";
     NSDictionary *parameters = @{@"method": @"flickr.photos.search",
@@ -53,18 +63,6 @@ static NSString * const kFlickrBaseURL = @"http://api.flickr.com/";
     }];
     
     [operation start];
-}
-
-#pragma mark - Private
-
-+ (FlickrService *)sharedClient {
-    static FlickrService *_sharedClient = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _sharedClient = [[FlickrService alloc] initWithBaseURL:[NSURL URLWithString:kFlickrBaseURL]];
-    });
-    
-    return _sharedClient;
 }
 
 @end

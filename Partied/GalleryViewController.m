@@ -2,7 +2,6 @@
 #import <AQGridView.h>
 #import <UIImageView+AFNetworking.h>
 #import "PhotoViewController.h"
-#import "FlickrService.h"
 #import "NormalCell.h"
 #import "Photo.h"
 
@@ -31,7 +30,7 @@ static CGRect const kCellFrame = {0.0f, 0.0f, 100.0f, 100.0f};
 	self.gridView.delegate = self;
 	self.gridView.dataSource = self;
     
-    [FlickrService photosWithBlock:^(NSArray *photos) {
+    [Photo photosWithBlock:^(NSArray *photos) {
         [self.items addObjectsFromArray:photos];
         [self.gridView reloadData];
     }];

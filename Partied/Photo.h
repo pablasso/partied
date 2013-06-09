@@ -6,4 +6,6 @@
 @property (nonatomic, strong) NSString *thumbnailURL;
 @property (nonatomic, strong) NSString *photoURL;
 
++ (void)photosWithBlock:(void (^)(NSArray *photos))block;
+    
 @end
